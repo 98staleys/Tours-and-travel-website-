@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="favicon" href="./wildlife photography.jpg">
+</head>
+<body><center>
+    <div class="logo">
+      <img src="./logo.png" alt="" srcset="">
+     
+      <h1>ASANTEAFRI TOURS</h1>
+    </div>
+    
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="./pages/About_us.html">About us</a>
+      <a href="./pages/our_services.html">Our services</a>
+      <a href="./pages/Contact_us.html">Contact US</a>
+      <a href="./pages/book_with_us.html">Book With US</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+  
+  <br>
+<body>
+    <div class="slider">
+        <img src="./parallax.jpg" alt="Image 1">
+        <img src="./birds watching.jpg" alt="Image 2">
+        <img src="./254.jpg" alt="Image 3">
+      </div>
+      <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+          </script>  
+
+<h3>Contact Us.</h3>
+<form action="/action_page.php"></form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email"><br>
+  <label for="telephone no">Telophone:</label><br>
+  <input type="tel" id="tel"><br>
+  <label for="country">Country:</label><br>
+  <input type="text" id="country"><br>
+  <input type="submit" value="submit">
+</form>
+
+<br>
+
+<h3>Follow Us On:</h3>
+<a href="https://www.facebook.com/stanley031" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/stanleymaina031" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com/stanleymaina90" class="fa fa-instagram"></a>
+<a href="https://wa.me/+254706423913" class="fa fa-whatsapp"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+
+<br>
+
+ <footer>
+  <p>ASANTEAFRIsafaris</p>
+  <p><a href="https://www.gmail.com/mbuguas312@gmail.com">mbuguas312@gmail.com</a></p>
+ </footer>
+ 
+</body>
+</html>

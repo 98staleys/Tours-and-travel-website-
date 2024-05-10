@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASANTEAFRI TOURS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="style.css">
+    <link rel="icon" type="favicon" href="./logo.png">
+
+</head>
+<body><center>
+  <div class="logo">
+    <img src="./logo.png" alt="" srcset="">
+   
+    <h1>ASANTEAFRI TOURS</h1>
+  </div>
+  
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="./pages/About_us.html">About us</a>
+    <a href="./pages/our_services.html">Our services</a>
+    <a href="./pages/Contact_us.html">Contact US</a>
+    <a href="./pages/book_with_us.html">Book With US</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+  <br>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="lentile lodge ht .jpg" style="width:100%">
+    <div class="text">Lentile lodge. </div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="lentile lodge.jpg" style="width:100%">
+    <div class="text">Lentile lodge swimming pool.</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="lentiles lg.jpg" style="width:100%">
+    <div class="text">Arial view of lentile lodge.</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)"></a>
+  <a class="next" onclick="plusSlides(1)"></a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+  
+
+
+
+  
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+
+
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="Stanley maina" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="@gmail.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Children</label>
+    <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkin-date">Check-in Date</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Check-out Date</label>
+    <input type="date" id="checkout-date" name="checkout" required>
+  </div>
+  <div class="elem-group">
+    <label for="service-selection">Select Service Preference</label>
+    <select id="service-selection" name="service_preference" required>
+        <option value="">Choose a service from the List</option>
+        <option value="Honey moon">Honey moon</option>
+        <option value="Game drive">Game drive</option>
+        <option value="Camping and hiking">Camping and hiking</option>
+        <option value="Lodges and Accomodation">Lodges and Accomodation</option>
+    </select>
+  </div>
+  <hr>
+  <div class="elem-group">
+    <label for="message">Message Us.</label>
+    <textarea id="message" name="visitor_message" placeholder="Leave your message Here." required></textarea>
+  </div>
+  <button type="submit">Book with AsanteAfri Tours</button>
+</form>
+
+<script>
+
+var currentDateTime = new Date();
+var year = currentDateTime.getFullYear();
+var month = (currentDateTime.getMonth() + 1);
+var date = (currentDateTime.getDate() + 1);
+
+if(date < 10) {
+date = '0' + date;
+}
+if(month < 10) {
+month = '0' + month;
+}
+
+var dateTomorrow = year + "-" + month + "-" + date;
+var checkinElem = document.querySelector("#checkin-date");
+var checkoutElem = document.querySelector("#checkout-date");
+
+checkinElem.setAttribute("min", dateTomorrow);
+
+checkinElem.onchange = function () {
+checkoutElem.setAttribute("min", this.value);
+}
+
+$(document).ready(function () {
+$('.navbar-light .dmenu').hover(function () {
+  $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+}, function () {
+  $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+});
+});
+</script>
+
+
+
+
+<br>
+
+<h3>Follow Us On:</h3>
+<a href="https://www.facebook.com/stanley031" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/stanleymaina031" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com/stanleymaina90" class="fa fa-instagram"></a>
+<a href="https://wa.me/+254706423913" class="fa fa-whatsapp"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+
+<hr>
+
+ <footer>
+  <p>@2023-By Stanleys IT Solutions</p>
+  <p><a href="https://www.gmail.com/mbuguas312@gmail.com">mbuguas312@gmail.com</a></p>
+ </footer>

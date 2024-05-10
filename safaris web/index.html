@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASANTEAFRI TOURS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="./styles/style.css">
+    
+    <link rel="icon" type="favicon" href="./assets/images/31lg.jpg">
+
+</head>
+<body><center>
+  <div class="logo">
+    <img src="./assets/images/logo/logo.png" alt="" srcset="">
+   
+    <h1>ASANTEAFRI TOURS</h1>
+  </div>
+  <br>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="./pages/About_us.html">About us</a>
+  <a href="./pages/our_services.html">Our services</a>
+  <a href="./pages/Contact_us.html">Contact US</a>
+  <a href="./pages/book_with_us.html">Book With US</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<br>
+
+<div class="slider">
+  <img src="./assets/images/31lg.jpg" alt="Image 1">
+  <img src="./assets/images/31c.jpg" alt="Image 2">
+  <img src="./assets/images/31mm.jpg" alt="Image 3">
+  <img src="./assets/images/31gmc.jpeg" alt="Image 4">
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+    </script>  
+
+
+<hr>
+
+<div class="cards">
+  <div class="card">
+    <div class="card_icon"></div>
+    <div class="card_head">
+    <h2>Our passion</h2>
+  </div>
+    Our passion is to ensure that your requirements are not only met but substantially fulfilled. All our staff are well trained, equipped and exposed to prolific wildlife and terrain best suited to provide you with intimate walk as you explore beauty of nature together. 
+  </div>
+  <div class="card">
+    <h2>Our Ambition</h2>
+    Our ambition will reward you an unparalleled lifetime experience and quality of your money. We are suitably designed for your adventure safari as a family, individuals, groups, conferences among others. 
+  </div>
+  <div class="card">
+    <h2>What we offer</h2>
+    We offer quality and cost friendly adventure safaris with centralized individual attention to our guests so as to ensure their comfort and good health in their period of stay resulting to an extraordinary experience. We never disappoint, we will gift you with ardent memories that will keep longing to travel, explore and adventure with us. 
+  </div>
+</div>
+
+
+
+
+
+
+<h3>Follow Us On:</h3>
+<a href="https://www.facebook.com/stanley031" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/stanleymaina031" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com/stanleymaina90" class="fa fa-instagram"></a>
+<a href="https://wa.me/+254706423913" class="fa fa-whatsapp"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+
+<hr>
+
+ <footer>
+  <p>@2023-By Stanleys IT Solutions</p>
+  <p><a href="https://www.gmail.com/mbuguas312@gmail.com">mbuguas312@gmail.com</a></p>
+ </footer>
+  
+</body>
+
+
+</html>
